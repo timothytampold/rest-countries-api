@@ -73,7 +73,7 @@ const Country: NextPage<IProps> = ({ countryData }) => {
                 : (
                   <ul className="flex gap-[.625rem] flex-wrap">
                     {countryData.borders.map(border => (
-                      <li>
+                      <li key={border.alpha3Code}>
                         <Link href={`/country/${border.alpha3Code}`}>
                           <a className="text-[.75rem] desktop:text-[.875rem] font-light h-7 flex items-center px-7 bg-white dark:bg-[#2B3844] drop-shadow">{border.name}</a>
                         </Link>
